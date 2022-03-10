@@ -1,0 +1,23 @@
+<?php
+$record = $block->getEditRecord();
+
+
+?>
+<form action="<?= $block->getUrl('crud/index/save'); ?>" method = "post">
+  
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value = "<?php echo $record['name']?>"><br>
+ 
+  <label for="post_content">Post content:</label><br>
+  <input type="text" id="post_content" name="post_content" value = "<?php echo $record['post_content']?>"><br><br>
+
+  <label for="name">url_key:</label><br>
+  <input type="text" id="url_key" name="url_key" value = "<?php echo $record['url_key']?>"><br>
+ 
+  <label for="post_content">tags:</label><br>
+  <input type="text" id="tags" name="tags" value = "<?php echo $record['tags']?>"><br><br>
+   
+   <input type="text" name="editRecordId" value="<?php echo $record['post_id']?>"><br><br>
+  <input type="submit" name="add record">
+
+</form>
